@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberwarden — defend the last ember</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #07060e;
+    overflow: hidden;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  #stage {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(1200px 700px at 50% 30%, #171233 0%, #07060e 70%);
+  }
+  canvas {
+    display: block;
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+    background: #0a0817;
+    box-shadow: 0 0 80px rgba(90, 60, 220, 0.25), 0 0 0 1px #241d4d;
+    cursor: crosshair;
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game" width="1280" height="720"></canvas>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
